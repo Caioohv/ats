@@ -1,0 +1,24 @@
+# Contexto de build da raiz (usado pela imagem nginx de produção).
+# Mantém o contexto enxuto — só backend/public e docker/nginx importam aqui.
+
+.git
+.github
+.gitignore
+
+# Dependências e artefatos pesados
+**/node_modules
+**/vendor
+**/.venv
+frontend/dist
+
+# Ambiente / segredos
+.env
+.env.*
+!.env.example
+
+# Docs e workflow
+docs
+workflow
+observability
+mobile
+*.md
